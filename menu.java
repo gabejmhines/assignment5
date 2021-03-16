@@ -25,8 +25,11 @@ public class menu {
                 String s2 = charInput.charInput();
                 System.out.println("Hello, please input how many chars you would like to display per line! Press enter when done.");
                 int numPerline = charInput.intInput();
+
+
                 char ch1 = s1.charAt(0);
                 char ch2 = s2.charAt(0);
+
                 Main.printChars(ch1, ch2, numPerline);
                 break;
             case 2:
@@ -71,9 +74,14 @@ public class menu {
 
     public static int inputIntegerFunction() {
         int inputInteger = 0;
-
         Scanner userInput = new Scanner(System.in);
-        inputInteger = userInput.nextInt();
+        if (userInput.hasNextInt()){
+            inputInteger = userInput.nextInt();
+        }
+        else{
+            inputInteger = -1;
+        }
+
 
         return inputInteger;
 

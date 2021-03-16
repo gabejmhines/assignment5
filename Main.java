@@ -21,6 +21,7 @@ public class Main {
     public static int y = 0; //value
     //Prints to grid alpha based on space between two user seperated input
     public static void printChars(char ch1, char ch2, int numPerLine) {
+
         for (char i = ch1; i <= ch2; i++) {
             y++;
           //  divisibleTest.graphParameters(divisibleTest.printer(i));
